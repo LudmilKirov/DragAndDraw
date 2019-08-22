@@ -11,14 +11,14 @@ import androidx.fragment.app.Fragment;
 
 public class DragAndDrawFragment extends Fragment {
 
-    public static DragAndDrawFragment newInstance (){
+    public static DragAndDrawFragment newInstance() {
         return new DragAndDrawFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.fragment_drag_and_draw,container,false);
+        View v = inflater.inflate(R.layout.fragment_drag_and_draw, container, false);
         return v;
     }
 }

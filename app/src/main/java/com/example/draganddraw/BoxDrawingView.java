@@ -54,7 +54,6 @@ public class BoxDrawingView extends View {
                 ", y=" + current.y);
 
         return true;
-
     }
 
     @Override
@@ -63,21 +62,18 @@ public class BoxDrawingView extends View {
         canvas.drawPaint(mBackgroundPaint);
 
         for (Box box : mBoxen) {
-            float left=Math.min(box.getOrigin().x,box.getCurrent().x);
-            float right = Math.max(box.getOrigin().x,box.getCurrent().x);
-            float top = Math.min(box.getOrigin().y,box.getCurrent().y);
-            float bottom = Math.max(box.getOrigin().y,box.getCurrent().y);
+            float left = Math.min(box.getOrigin().x, box.getCurrent().x);
+            float right = Math.max(box.getOrigin().x, box.getCurrent().x);
+            float top = Math.min(box.getOrigin().y, box.getCurrent().y);
+            float bottom = Math.max(box.getOrigin().y, box.getCurrent().y);
 
-            canvas.drawRect(left,top,right,bottom,mBoxPaint);
-
-
+            canvas.drawRect(left, top, right, bottom, mBoxPaint);
         }
     }
 
     //Used when creating the view in code
     public BoxDrawingView(Context context) {
         this(context, null);
-
     }
 
     //Used when inflating the view from XML
